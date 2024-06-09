@@ -27,6 +27,8 @@
     protonvpn-gui
 
     inkscape
+
+    obsidian
   ];
 
   programs.chromium = {
@@ -38,13 +40,6 @@
       { id = "ghmbeldphafepmbegfdlkpapadhbakde"; } # Proton Pass
       { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # Sponsor Block
       { id = "ifnkdbpmgkdbfklnbfidaackdenlmhgh"; } # PopUpOFF
-    ];
-  };
-
-  programs.vscode = {
-    enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      dracula-theme.theme-dracula
     ];
   };
 
