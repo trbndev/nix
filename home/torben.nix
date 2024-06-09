@@ -14,6 +14,10 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./vscode.nix
+    ./git.nix
+    ./chrome.nix
+    ./firefox.nix
   ];
 
   home = {
@@ -27,39 +31,6 @@
     inkscape
     obsidian
   ];
-
-  programs.chromium = {
-    enable = true;
-    extensions = [
-      { id = "epcnnfbjfcgphgdmggkamkmgojdagdnn"; } # uBlock Origin
-      { id = "edibdbjcniadpccecjdfdjjppcpchdlm"; } # I still don't care about cookies
-      { id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"; } # Privacy Badger
-      { id = "ghmbeldphafepmbegfdlkpapadhbakde"; } # Proton Pass
-      { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # Sponsor Block
-      { id = "ifnkdbpmgkdbfklnbfidaackdenlmhgh"; } # PopUpOFF
-    ];
-  };
-
-  programs.firefox = {
-    enable = true;
-    package = pkgs.librewolf;
-    # profiles.torben = {};
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "Torben Haack";
-    userEmail = "tohaack@pm.me";
-  };
-
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscodium;
-    extensions = with pkgs.vscode-extensions; [
-      jnoortheen.nix-ide
-      seatonjiang.gitmoji-vscode
-    ];
-  };
 
   # Enable home-manager
   programs.home-manager.enable = true;
