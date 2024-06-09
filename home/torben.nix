@@ -23,6 +23,8 @@
 
   home.packages = with pkgs; [
     fastfetch
+
+    protonvpn-gui
   ];
 
   programs.chromium = {
