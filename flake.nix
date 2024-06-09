@@ -27,7 +27,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64_linux;
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-          ./hosts/ideapad/home.nix
+          ./home/torben.nix
         ];
       };
     };
