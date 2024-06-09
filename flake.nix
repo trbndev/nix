@@ -29,7 +29,7 @@
             home-manager.useUserPackages = true;
 
             # TODO replace ryan with your own username
-            users.torben = import ./home/torben.nix;
+            home-manager.users.torben = import ./home/torben.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
