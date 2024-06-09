@@ -9,9 +9,15 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    grub = {
+      efiSupport = true;
+      device = "nodev";
+    };
+  };
   boot.initrd.luks.devices."luks-949179a6-44cc-4fdb-b6da-4f85e54cc771".device = "/dev/disk/by-uuid/949179a6-44cc-4fdb-b6da-4f85e54cc771";
   networking.hostName = "ideapad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
