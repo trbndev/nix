@@ -43,6 +43,12 @@
   programs.firefox = {
     enable = true;
     package = pkgs.librewolf;
+    profiles.torben = {
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        ublock-origin
+        bitwarden
+      ];
+    };
   };
 
   programs.git = {
