@@ -47,6 +47,10 @@
     fastfetch
   ];
 
+  programs.chromium = {
+    enable = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "Torben Haack";
