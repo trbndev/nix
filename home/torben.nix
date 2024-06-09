@@ -30,6 +30,7 @@
     protonvpn-gui
     inkscape
     obsidian
+    libreoffice
   ];
 
   # Enable home-manager
