@@ -26,8 +26,6 @@
     protonvpn-gui
     inkscape
     obsidian
-
-    nur.repos.rycee.firefox-addons
   ];
 
   programs.chromium = {
@@ -46,10 +44,7 @@
     enable = true;
     package = pkgs.librewolf;
     profiles.torben = {
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        ublock-origin
-        bitwarden
-      ];
+      
     };
   };
 
