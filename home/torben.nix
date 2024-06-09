@@ -26,7 +26,6 @@
     protonvpn-gui
     inkscape
     obsidian
-    librewolf
   ];
 
   programs.chromium = {
