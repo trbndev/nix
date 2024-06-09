@@ -49,6 +49,16 @@
     userEmail = "tohaack@pm.me";
   };
 
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+    extensions = with pkgs.vscode-extensions; [
+      dracula-theme.theme-dracula
+      vscodevim.vim
+      yzhang.markdown-all-in-one
+    ];
+  };
+
   # Enable home-manager
   programs.home-manager.enable = true;
   
