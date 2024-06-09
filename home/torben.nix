@@ -18,6 +18,7 @@
     ./git.nix
     ./chrome.nix
     ./firefox.nix
+    ./shell.nix
   ];
 
   home = {
