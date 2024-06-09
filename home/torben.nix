@@ -41,6 +41,11 @@
     ];
   };
 
+  programs.firefox = {
+    enable = true;
+    package = pkgs.librewolf;
+  };
+
   programs.git = {
     enable = true;
     userName = "Torben Haack";
