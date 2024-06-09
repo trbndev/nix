@@ -26,6 +26,8 @@
     protonvpn-gui
     inkscape
     obsidian
+
+    nur.repos.rycee.firefox-addons
   ];
 
   programs.chromium = {
