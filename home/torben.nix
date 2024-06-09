@@ -43,9 +43,7 @@
   programs.firefox = {
     enable = true;
     package = pkgs.librewolf;
-    profiles.torben = {
-      
-    };
+    # profiles.torben = {};
   };
 
   programs.git = {
