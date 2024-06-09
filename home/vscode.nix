@@ -12,6 +12,11 @@
       editor.cursorSmoothCaretAnimation = "on";
       editor.smoothScrolling = true;
       editor.cursorBlinking = "smooth";
+      editor.tabSize = 2;
+      workbench.activityBar.location = "bottom";
+      workbench.sideBar.location = "right";
+      editor.minimap.enabled = false;
+      window.titleBarStyle = "custom";
     };
   };
 }
