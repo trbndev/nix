@@ -25,6 +25,8 @@
     fastfetch
 
     protonvpn-gui
+
+    inkscape
   ];
 
   programs.chromium = {
