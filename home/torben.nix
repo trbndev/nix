@@ -43,7 +43,6 @@
   programs.firefox = {
     enable = true;
     package = pkgs.librewolf;
-    profiles.main.extensions = with inputs.firefox-addons; [ ublock-origin bitwarden ];
   };
 
   programs.git = {
