@@ -2,7 +2,7 @@
 
 {
   imports =
-    [
+    [ 
       ./hardware.nix
     ];
 
@@ -100,8 +100,11 @@
       kdePackages.kate
     #  thunderbird
     ];
+    shell = pkgs.zsh;
   };
   
+  programs.zsh.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
