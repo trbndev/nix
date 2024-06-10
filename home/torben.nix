@@ -29,6 +29,7 @@
   home.packages = with pkgs; [
     fastfetch
     protonvpn-gui
+    # proton-pass -> in repo but not stable ... add overlay for unstable
     inkscape
     obsidian
     libreoffice
