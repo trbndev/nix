@@ -1,0 +1,1 @@
+# @trbndev/nix -- NixOS configuration

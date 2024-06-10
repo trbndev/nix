@@ -1,24 +1,12 @@
-# This is your home-manager configuration file
-# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-  # You can import other home-manager modules here
-  imports = [
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
+{ inputs, lib, config, pkgs, ... }:
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
-    ./vscode.nix
-    ./git.nix
-    ./chrome.nix
-    ./firefox.nix
-    ./shell.nix
+{
+  imports = [
+    ./apps/vscode.nix
+    ./apps/chrome.nix
+    ./apps/firefox.nix
+    ./config/git.nix
+    ./config/shell.nix
   ];
 
   home = {
@@ -28,13 +16,13 @@
 
   home.packages = with pkgs; [
     fastfetch
+    tree
 
     # Proton
     protonvpn-gui
     protonmail-desktop
+    # proton-pass # Not yet in unstable or stable
 
-    # proton-pass -> in repo but not stable ... add overlay for unstable
-    
     # Graphics
     inkscape
     gimp

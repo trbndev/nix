@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware.nix
     ];
 
@@ -30,6 +30,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  systemd.services.wpa_supplicant.serviceConfig.TimeoutSec = "10";
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
