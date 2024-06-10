@@ -28,9 +28,18 @@
 
   home.packages = with pkgs; [
     fastfetch
+
+    # Proton
     protonvpn-gui
+    protonmail-desktop
+
     # proton-pass -> in repo but not stable ... add overlay for unstable
+    
+    # Graphics
     inkscape
+    gimp
+
+    # Office
     obsidian
     libreoffice
   ];
