@@ -2,8 +2,8 @@
   description = "@trbndev/nix - Nix configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -11,14 +11,16 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, ... }: 
+  outputs = inputs @ { self, nixpkgs, nixpkgs-stable, home-manager, ... }: 
   let 
     inherit (self) outputs;
   in {
     nixosConfigurations = {
       ideapad = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs outputs; };
+        specialArgs = {   
+          inherit inputs outputs; 
+        };
         modules = [
           ./hosts/ideapad/configuration.nix
 
