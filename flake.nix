@@ -2,16 +2,16 @@
   description = "@trbndev/nix - Nix configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-24.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, nixpkgs-stable, home-manager, ... }: 
+  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager, ... }: 
   let 
     inherit (self) outputs;
   in {
