@@ -102,9 +102,6 @@
   
   programs.zsh.enable = true;
 
-  virtualisation.vmware.host.enable = true;
-  # virtualisation.vmware.host.package = pkgs.vmware-workstation;
-
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
