@@ -28,9 +28,8 @@
     gimp
 
     # Emulation
-    qemu
-    quickemu
-    bottles
+    # qemu
+    # quickemu
 
     # Office
     libreoffice
