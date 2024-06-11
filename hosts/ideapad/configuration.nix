@@ -105,6 +105,8 @@
   
   programs.zsh.enable = true;
 
+  virtualisation.vmware.host.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

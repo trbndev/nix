@@ -1,4 +1,4 @@
-{ inputs, lib, config, pkgs, ... }:
+{ inputs, outputs, lib, config, pkgs, ... }:
 
 {
   imports = [
@@ -27,10 +27,16 @@
     inkscape
     gimp
 
+    # vmware-workstation
+
     # Office
     obsidian
     libreoffice
+
+    unzip
   ];
+
+
 
   # Enable home-manager
   programs.home-manager.enable = true;
