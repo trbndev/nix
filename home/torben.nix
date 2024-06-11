@@ -30,7 +30,7 @@
     qemu
 
     # Office
-    obsidian
+    # obsidian
     libreoffice
 
     unzip
