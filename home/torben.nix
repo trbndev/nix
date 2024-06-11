@@ -27,7 +27,7 @@
     inkscape
     gimp
 
-    # vmware-workstation
+    qemu
 
     # Office
     obsidian
