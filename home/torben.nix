@@ -27,7 +27,9 @@
     inkscape
     gimp
 
+    # Virtualisation
     qemu
+    quickemu
 
     # Office
     libreoffice
