@@ -27,9 +27,10 @@
     inkscape
     gimp
 
-    # Virtualisation
+    # Emulation
     qemu
     quickemu
+    bottles
 
     # Office
     libreoffice
