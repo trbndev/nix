@@ -1,4 +1,4 @@
-{ inputs, outputs, lib, config, pkgs, ... }:
+{ lib, config, pkgs, pkgs-stable, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
     homeDirectory = "/home/torben";
   };
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     fastfetch
     tree
 
@@ -30,11 +30,16 @@
     qemu
 
     # Office
-    # obsidian
     libreoffice
 
     unzip
-  ];
+  ])
+
+  ++
+
+  (with pkgs-stable; [
+    obsidian
+  ]);
 
 
 
