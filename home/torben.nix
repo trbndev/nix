@@ -26,6 +26,7 @@
     # Graphics
     inkscape
     gimp
+    pinta
 
     # Emulation
     # qemu
