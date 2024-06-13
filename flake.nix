@@ -14,16 +14,16 @@
   outputs = inputs @ { self, nixpkgs, nixpkgs-stable, home-manager, ... }: 
   let 
     system = "x86_64-linux";
-    myLib = import ./utils/path.nix;
+    pkgs-stable = import nixpkgs-stable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations = {
       ideapad = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {   
-          pkgs-stable = import nixpkgs-stable {
-            inherit system;
-          };
-          inherit myLib;
+          inherit pkgs-stable;
         };
         modules = [
           ./hosts/ideapad/configuration.nix
@@ -31,10 +31,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager.extraSpecialArgs = { 
-              pkgs-stable = import nixpkgs-stable {
-                inherit system;
-              };
-              inherit myLib;  
+              inherit pkgs-stable;
             };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

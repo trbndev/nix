@@ -1,4 +1,4 @@
-{ lib, nixpkgs, nixpkgs-stable, ... }:
+{ lib, nixpkgs, ... }:
 
 {
   # Enable Nix Flakes
@@ -6,7 +6,7 @@
   
   # Allow unfree packages from stable and unstable branch
   nixpkgs.config.allowUnfree = lib.mkForce true;
-  nixpkgs-stable.config.allowUnfree = lib.mkForce true;
+  # pkgs-stable.config.allowUnfree = lib.mkForce true;
 
   # Automatic garbe collection
   nix.gc = {

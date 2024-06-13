@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 
 {
   imports =
@@ -6,6 +6,7 @@
       ./hardware.nix
       ./../../modules/system/base
       ./../../modules/system/users/torben.nix
+      ./../../modules/desktop/base.nix
       ./../../modules/desktop/kde.nix
     ];
 
