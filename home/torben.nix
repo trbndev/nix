@@ -36,8 +36,6 @@
     libreoffice
 
     unzip
-
-    gnumake
   ])
 
   ++
