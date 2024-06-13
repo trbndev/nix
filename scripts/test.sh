@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo nixos-rebuild dry-activate --flake .
+sudo nixos-rebuild dry-activate --flake . "$@"

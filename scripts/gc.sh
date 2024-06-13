@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo nix-collect-garbage
+sudo nix-collect-garbage "$@"
