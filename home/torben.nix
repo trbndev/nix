@@ -21,7 +21,7 @@
     # Proton
     protonvpn-gui
     protonmail-desktop
-    proton-pass
+    proton-pass # -> currently collision with protonmail-desktop
 
     # Graphics
     inkscape
@@ -29,8 +29,8 @@
     pinta
 
     # Emulation
-    # qemu
-    # quickemu
+    qemu
+    quickemu
 
     # Office
     libreoffice
