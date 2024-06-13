@@ -36,6 +36,8 @@
     libreoffice
 
     unzip
+
+    ciscoPacketTracer8
   ])
 
   ++
