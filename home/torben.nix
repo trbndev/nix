@@ -37,8 +37,6 @@
 
     unzip
 
-    ciscoPacketTracer8
-
     gnumake
   ])
 
