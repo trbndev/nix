@@ -21,7 +21,7 @@
     # Proton
     protonvpn-gui
     protonmail-desktop
-    # proton-pass # Not yet in unstable or stable
+    proton-pass
 
     # Graphics
     inkscape
