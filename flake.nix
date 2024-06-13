@@ -14,7 +14,7 @@
   outputs = inputs @ { self, nixpkgs, nixpkgs-stable, home-manager, ... }: 
   let 
     system = "x86_64-linux";
-    myLib = import ./utils/path;
+    myLib = import ./utils/path.nix;
   in {
     nixosConfigurations = {
       ideapad = nixpkgs.lib.nixosSystem {
