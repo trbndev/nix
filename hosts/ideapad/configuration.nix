@@ -6,8 +6,8 @@
       ./hardware.nix
       ./../../modules/system/base
       ./../../modules/system/users/torben.nix
-      ./../../modules/desktop/base.nix
-      ./../../modules/desktop/kde.nix
+      ./../../modules/system/desktop/base.nix
+      ./../../modules/system/desktop/kde.nix
     ];
 
   # Disk encryption
