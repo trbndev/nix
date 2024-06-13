@@ -9,3 +9,4 @@
 - [ ] make Home-Manager Config more modular (maybe use modules/ dir?)
 - [ ] create a base system configuration, make nixos config more modular overall
 - [ ] Configure VSCodium
+- [ ] Setup Git Signing with SSH Keys
