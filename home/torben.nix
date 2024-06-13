@@ -21,7 +21,7 @@
     # Proton
     protonvpn-gui
     protonmail-desktop
-    proton-pass # -> currently collision with protonmail-desktop
+    # proton-pass # -> currently collision with protonmail-desktop
 
     # Graphics
     inkscape
@@ -38,6 +38,8 @@
     unzip
 
     ciscoPacketTracer8
+
+    gnumake
   ])
 
   ++
