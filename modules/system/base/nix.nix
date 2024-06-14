@@ -1,12 +1,12 @@
-{ lib, nixpkgs, ... }:
+{ lib, inputs, ... }:
 
 {
   # Enable Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # Allow unfree packages from stable and unstable branch
-  nixpkgs.config.allowUnfree = lib.mkForce true;
-  # pkgs-stable.config.allowUnfree = lib.mkForce true;
+  inputs.nixpkgs.config.allowUnfree = lib.mkForce true;
+  inputs.nixpkgs-stable.config.allowUnfree = lib.mkForce true;
 
   # Automatic garbe collection
   nix.gc = {
