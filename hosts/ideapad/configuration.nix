@@ -1,14 +1,15 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports =
     [ 
       ./hardware.nix
-      ./../../modules/system/base
+      ./../../modules/system/base/default.nix
       ./../../modules/system/users/torben.nix
       ./../../modules/system/desktop/base.nix
       ./../../modules/system/desktop/kde.nix
     ];
+
 
   # Disk encryption
   boot.initrd.luks.devices."luks-949179a6-44cc-4fdb-b6da-4f85e54cc771".device = "/dev/disk/by-uuid/949179a6-44cc-4fdb-b6da-4f85e54cc771";

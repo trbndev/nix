@@ -22,9 +22,7 @@
     nixosConfigurations = {
       ideapad = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {
-          inherit inputs pkgs-stable;
-        };
+        specialArgs = commonArgs;
 
         modules = [
           ./hosts/ideapad/configuration.nix
