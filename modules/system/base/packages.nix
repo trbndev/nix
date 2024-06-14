@@ -6,5 +6,7 @@
 
     bat
     git
+
+    nixd
   ];
 }
