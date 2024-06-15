@@ -7,6 +7,7 @@
     ./apps/firefox.nix
     ./config/git.nix
     ./config/shell.nix
+    ./config/gnome.nix
   ];
 
   home = {
@@ -42,7 +43,9 @@
     stable.obsidian
   ];
 
+  programs.librewolf.enable = true;
 
+  gtk.cursorTheme = pkgs.vanilla-dmz;
 
   # Enable home-manager
   programs.home-manager.enable = true;
