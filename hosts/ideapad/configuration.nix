@@ -7,7 +7,7 @@
       ./../../modules/system/base
       ./../../modules/system/users/torben.nix
       ./../../modules/system/desktop/base.nix
-      ./../../modules/system/desktop/kde.nix
+      ./../../modules/system/desktop/gnome.nix
       ./../../modules/apps/firefox.nix
     ];
 
