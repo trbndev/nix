@@ -2,6 +2,6 @@
 
 {
   # Enable the Gnome Desktop Environment.
-  services.displayManager.gddm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gddm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 }
