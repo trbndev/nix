@@ -8,6 +8,7 @@
       ./../../modules/system/users/torben.nix
       ./../../modules/system/desktop/base.nix
       ./../../modules/system/desktop/kde.nix
+      ./../../modules/apps/firefox.nix
     ];
 
 
