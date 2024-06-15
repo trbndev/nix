@@ -50,17 +50,6 @@
         "signon.rememberSignons" = false;
         "extensions.autoDisableScopes" = 0;
       };
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-        # General
-        proton-pass
-
-        # Privacy
-        ublock-origin
-        privacy-badger
- 
-        # Quality of Life
-        sponsorblock
-      ];
     };
   };
 }
