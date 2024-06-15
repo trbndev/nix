@@ -5,44 +5,28 @@
     enable = true;
 
     profiles.torben = {
-      search.engines = {
-        "Nix" = {
-          urls = [{
-            template = "https://mynixos.com/search";
-            params = [
-              { name = "q"; value = "{searchTerms}"; }
-            ];
-          }];
+      search = {
+        force = true;
+        engines = {
+          "Nix" = {
+            urls = [{
+              template = "https://mynixos.com/search";
+              params = [
+                { name = "q"; value = "{searchTerms}"; }
+              ];
+            }];
 
-          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          definedAliases = [ "n" ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "n" ];
+          };
+
+          "Bing".metdaData.hidden = true;
+          "Wikipedia (en)".metaData.hidden = true;
+          "Google".metaData.alias = "g";
+          "DuckDuckGo".metaData.alias = "d";
         };
-
-        "DuckDuckGo" = {
-          urls = [{
-            template = "https://duckduckgo.com/";
-            params = [
-              { name = "q"; value = "{searchTerms}"; }
-            ];
-          }];
-
-          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          definedAliases = [ "d" ];
-        };
-
-        "Google" = {
-          urls = [{
-            template = "https://google.com/search";
-            params = [
-              { name = "q"; value = "{searchTerms}"; }
-            ];
-          }];
-
-          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          definedAliases = [ "g" ];
-        };
+        default = "DuckDuckGo";
       };
-      search.force = true;
 
       bookmarks = [
         {
