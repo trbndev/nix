@@ -4,15 +4,7 @@
   programs.firefox = {
     enable = true;
 
-    policies = {
-      DisablePocket = true;
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-      DontCheckDefaultBrowser = true;
-    };
-
     profiles.torben = {
-
       search.engines = {
         "Nix" = {
           urls = [{
@@ -24,6 +16,30 @@
 
           icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           definedAliases = [ "n" ];
+        };
+
+        "DuckDuckGo" = {
+          urls = [{
+            template = "https://duckduckgo.com/";
+            params = [
+              { name = "q"; value = "{searchTerms}"; }
+            ];
+          }];
+
+          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          definedAliases = [ "d" ];
+        };
+
+        "Google" = {
+          urls = [{
+            template = "https://google.com/search";
+            params = [
+              { name = "q"; value = "{searchTerms}"; }
+            ];
+          }];
+
+          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          definedAliases = [ "g" ];
         };
       };
       search.force = true;

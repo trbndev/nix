@@ -33,24 +33,32 @@ in {
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
       };
 
-      ExtensionSettings = {
-        "uBlock0@raymondhill.net" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-          installation_mode = "force_installed";
+      ExtensionSettings = with builtins;
+        let extension = shortId: uuid: {
+          name = uuid;
+          value = {
+            install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/${shortId}/latest.xpi";
+            installation_mode = "normal_installed";
+          };
         };
-        "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        "jid1-MnnxcxisBPnSXQ@jetpack" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        "extension@tabliss.io" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/3940751/tabliss-2.6.0.xpi";
-          installation_mode = "force_installed";
-        };
-      };
+        in listToAttrs [
+          # Essentials
+          (extension "ublock-origin" "uBlock0@raymondhill.net")
+          (extension "proton-pass" "78272b6fa58f4a1abaac99321d503a20")
+          (extension "multi-account-containers" "@testpilot-containers")
+          (extension "popupoff" "{154cddeb-4c8b-4627-a478-c7e5b427ffdf}")
+
+          # Privacy
+          (extension "privacy-badger17" "jid1-MnnxcxisBPnSXQ@jetpack")
+          (extension "clearurls" "{74145f27-f039-47ce-a470-a662b129930a}")
+          (extension "canvasblocker" "CanvasBlocker@kkapsner.de")
+          (extension "decentraleyes" "jid1-BoFifL9Vbdl2zQ@jetpack")
+          (extension "dont-track-me-google1" "dont-track-me-google@robwu.nl")
+
+          # Quality of Life
+          (extension "minimaltwitter" "{e7476172-097c-4b77-b56e-f56a894adca9}")
+          (extension "sponsorblock" "sponsorBlocker@ajay.app")
+        ];
     };
   };
 }
