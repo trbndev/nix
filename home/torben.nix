@@ -1,4 +1,4 @@
-{ lib, config, pkgs, pkgs-stable, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
     homeDirectory = "/home/torben";
   };
 
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     fastfetch
     tree
 
@@ -38,13 +38,9 @@
     unzip
 
     ciscoPacketTracer8
-  ])
 
-  ++
-
-  (with pkgs-stable; [
-    obsidian
-  ]);
+    stable.obsidian
+  ];
 
 
 

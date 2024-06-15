@@ -4,7 +4,7 @@
   imports =
     [ 
       ./hardware.nix
-      ./../../modules/system/base/default.nix
+      ./../../modules/system/base
       ./../../modules/system/users/torben.nix
       ./../../modules/system/desktop/base.nix
       ./../../modules/system/desktop/kde.nix
