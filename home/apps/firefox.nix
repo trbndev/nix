@@ -20,7 +20,7 @@
             definedAliases = [ "n" ];
           };
 
-          "Bing".metdaData.hidden = true;
+          "Bing".metaData.hidden = true;
           "Wikipedia (en)".metaData.hidden = true;
           "Google".metaData.alias = "g";
           "DuckDuckGo".metaData.alias = "d";
