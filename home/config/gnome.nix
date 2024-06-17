@@ -13,10 +13,8 @@
           # you can easily get its UUID by accessing its extensionUuid
           # field (look at the following example).
           pkgs.gnomeExtensions.gsconnect.extensionUuid
-          
-          # Alternatively, you can manually pass UUID as a string.  
-          "blur-my-shell@aunetx"
-          # ...
+          pkgs.gnomeExtension.blur-my-shell.extensionUuid
+          pkgs.gnomeExtensions.dash-to-dock.extensionUuid
         ];
       };
 
