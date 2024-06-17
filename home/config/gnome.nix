@@ -29,7 +29,7 @@
       "org/gnome/shell/favorite-apps" = [
         "org.gnome.Nautilus.desktop"
         "firefox.desktop"
-      ]
+      ];
     };
   };
 }
