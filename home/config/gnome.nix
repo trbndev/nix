@@ -26,10 +26,12 @@
         noise-amount = 0;
       };
 
-      "org/gnome/shell/favorite-apps" = [
-        "org.gnome.Nautilus.desktop"
-        "firefox.desktop"
-      ];
+      "org/gnome/shell" = {
+        favorite-apps = [
+          "org.gnome.Nautilus.desktop"
+          "firefox.desktop"
+        ];
+      };
     };
   };
 }
