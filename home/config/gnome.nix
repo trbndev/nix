@@ -25,6 +25,11 @@
         brightness = 0.75;
         noise-amount = 0;
       };
+
+      "org/gnome/shell/favorite-apps" = [
+        "org.gnome.Nautilus.desktop"
+        "firefox.desktop"
+      ]
     };
   };
 }

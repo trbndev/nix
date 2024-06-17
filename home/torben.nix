@@ -41,6 +41,8 @@
     ciscoPacketTracer8
 
     stable.obsidian
+
+    librewolf
   ];
 
   programs.librewolf.enable = true;

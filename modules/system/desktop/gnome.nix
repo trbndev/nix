@@ -38,9 +38,11 @@
     # pkgs.gnome-connections
   ];
 
-  # Install Gnome Extensions
-  environment.systemPackages = with pkgs.gnomeExtensions; [
-    blur-my-shell
-    dash-to-dock
+  # Install Specific Gnome Apps
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-dock
+
+    gnome.dconf-editor
   ];
 }
