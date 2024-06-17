@@ -26,6 +26,10 @@
         noise-amount = 0;
       };
 
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = "appmenu:minimize,maximize,close";
+      };
+
       "org/gnome/shell" = {
         favorite-apps = [
           "org.gnome.Nautilus.desktop"
