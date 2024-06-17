@@ -44,5 +44,6 @@
     gnomeExtensions.dash-to-dock
 
     gnome.dconf-editor
+    gnome.gnome-tweaks
   ];
 }
