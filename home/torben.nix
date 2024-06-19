@@ -21,8 +21,7 @@
 
     # Proton
     protonvpn-gui
-    protonmail-desktop
-    # proton-pass # -> currently collision with protonmail-desktop
+    proton-pass
 
     # Graphics
     inkscape
@@ -46,8 +45,6 @@
   ];
 
   programs.librewolf.enable = true;
-
-  gtk.cursorTheme = pkgs.vanilla-dmz;
 
   # Enable home-manager
   programs.home-manager.enable = true;
