@@ -6,10 +6,8 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    # initExtra = "eval \"$(oh-my-posh init zsh)\"";
+    initExtra = ''
+      fastfetch
+    '';
   };
-  # programs.oh-my-posh = {
-  #  enable = true;
-  #  enableZshIntegration = true;
-  # };
 }
