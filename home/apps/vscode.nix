@@ -9,14 +9,21 @@
       seatonjiang.gitmoji-vscode
     ];
     userSettings = {
+      # Editor Settings
       editor.cursorSmoothCaretAnimation = "on";
       editor.smoothScrolling = true;
       editor.cursorBlinking = "smooth";
       editor.tabSize = 2;
+      editor.minimap.enabled = false;
+      
+      # Workbench Settings
       workbench.activityBar.location = "bottom";
       workbench.sideBar.location = "right";
-      editor.minimap.enabled = false;
+      workbench.layoutControl.enabled = false;
+
+      # Window Settings
       window.titleBarStyle = "custom";
+      window.commandCenter = false;
     };
   };
 }
