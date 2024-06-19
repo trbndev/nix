@@ -42,6 +42,8 @@
     stable.obsidian
 
     librewolf
+
+    spotify
   ];
 
   programs.librewolf.enable = true;
