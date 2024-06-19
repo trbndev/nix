@@ -35,6 +35,11 @@
         noise-amount = 0;
       };
 
+
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        dash-max-icon-size = 32;
+      };
+
       "org/gnome/desktop/wm/preferences" = {
         button-layout = "appmenu:minimize,maximize,close";
       };
