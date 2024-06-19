@@ -24,6 +24,9 @@
       # Window Settings
       window.titleBarStyle = "custom";
       window.commandCenter = false;
+
+      # Git Settings
+      git.confirmSync = false;
     };
   };
 }
