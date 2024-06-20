@@ -35,6 +35,7 @@
       # Extension Settings
       "org/gnome/shell/extensions/dash-to-dock" = {
         dash-max-icon-size = 32;
+        running-indicator-style = "DOTS";
       };
 
     };
